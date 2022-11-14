@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(199, 214, 227);
+}
+.copyright {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.copyright h1 {
+    font: 22px 'Noto Serif', serif;
+}
+.circle {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    /* transform: rotate(180deg); */
+}
+.circle .row {
+    position: absolute;
+    transform: rotate(0deg);
+    opacity: 0;
+    animation: row 1s linear forwards;
+}
+@keyframes row {
+    to {
+        opacity: 1;
+    }
+}
+.circle .row:nth-child(1) {
+    animation-delay: 1s;
+}
+.circle .row:nth-child(2) {
+    transform: rotate(90deg);
+    animation-delay: 6s;
+}
+.circle .row:nth-child(3) {
+    transform: rotate(45deg);
+    animation-delay: 10s;
+}
+.circle .row:nth-child(4) {
+    transform: rotate(135deg);
+    animation-delay: 14.5s;
+}
+.circle .row:nth-child(5) {
+    transform: rotate(20deg);
+    animation-delay: 18s;
+}
+.circle .row:nth-child(6) {
+    transform: rotate(113deg);
+    animation-delay: 22s;
+}
+.circle .row:nth-child(7) {
+    transform: rotate(160deg);
+    animation-delay: 26s;
+}
+.circle .row:nth-child(8) {
+    transform: rotate(65deg);
+    animation-delay: 29.8s;
+}
+.circle .row .row-in {
+    width: 500px;
+    height: 3px;
+    background: #000;
+}
+.circle .row .circle-in {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -15px;
+    z-index: -1;
+    animation: circle 2s ease-in-out alternate infinite;
+}
+.circle .row:nth-child(1) .circle-in {
+    animation-delay: 2s;
+}
+.circle .row:nth-child(2) .circle-in {
+    animation-delay: 5s;
+}
+.circle .row:nth-child(3) .circle-in {
+    animation-delay: 9.5s;
+}
+.circle .row:nth-child(4) .circle-in {
+    animation-delay: 12.5s;
+}
+.circle .row:nth-child(5) .circle-in {
+    animation-delay: 17.73s;
+}
+.circle .row:nth-child(6) .circle-in {
+    animation-delay: 16.75s;
+}
+.circle .row:nth-child(7) .circle-in {
+    animation-delay: 8.25s;
+}
+.circle .row:nth-child(8) .circle-in {
+    animation-delay: 29.215s;
+}
+@keyframes circle {
+    to {
+        right: 470px;
+    }
+}
+
+
+
+
+
